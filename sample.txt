@@ -89,6 +89,10 @@ log transformation
 df['ApplicantIncomeLog'] = np.log(df['ApplicantIncome']+1)
 sns.distplot(df["ApplicantIncomeLog"])
 
+clf=svm.SVC(kernel='linear',c=1.0)
+from sklearn.naive_bayes_algorithm import GaussianNB
+classifier = GaussianNB()
+classifier.fit(X_train, y_train)
 
 
 
